@@ -153,17 +153,55 @@
             </a>
 <!-- Navigation Links (Desktop) -->
 <nav class="hidden md:flex gap-6 items-center">
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer active:opacity-80" href="../index.html#programs">Programs</a>
+<div class="relative group">
+<button class="flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">
+                    Programs
+                    <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle shadow-xl w-64 p-2">
+<a class="block px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-sm" href="weight-loss.html">Weight Loss</a>
+<a class="block px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-sm" href="pcod-pcos.html">PCOD / PCOS</a>
+<a class="block px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-sm" href="diabetes.html">Diabetes</a>
+<a class="block px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-sm" href="post-pregnancy.html">Post Pregnancy</a>
+<a class="block px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-sm" href="thyroid.html">Thyroid</a>
+<a class="block px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors text-sm" href="kids-nutrition.html">Kids Nutrition</a>
+</div>
+</div>
+</div>
 <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer active:opacity-80" href="../index.html#why-us">Why Us</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer active:opacity-80" href="../index.html#stories">Stories</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer active:opacity-80" href="../index.html#how-it-works">How it Works</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 cursor-pointer active:opacity-80" href="../index.html#faq">FAQ</a>
 </nav>
 <!-- Actions -->
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
 <a class="hidden md:block font-label-caps text-label-caps text-primary border border-primary px-4 py-2 rounded hover:bg-primary/5 transition-colors" href="https://wa.me/917351189757?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Sanchi%20Nutrition%20%26%20Wellness%20programs." rel="noopener" target="_blank">WhatsApp</a>
-<a class="font-label-caps text-label-caps bg-primary text-on-primary px-4 py-2 rounded hover:opacity-90 transition-opacity shadow-[0_4px_20px_rgba(0,38,64,0.08)]" href="tel:+917351189757">Call Now</a>
+<a class="hidden md:inline-flex font-label-caps text-label-caps bg-primary text-on-primary px-4 py-2 rounded hover:opacity-90 transition-opacity shadow-[0_4px_20px_rgba(0,38,64,0.08)]" href="tel:+917351189757">Call Now</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu" class="md:hidden text-primary p-2" id="mobile-menu-toggle">
+<span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+</button>
 </div>
+</div>
+<!-- Mobile Menu Panel -->
+<div class="md:hidden hidden border-t border-border-subtle bg-surface" id="mobile-menu">
+<nav class="flex flex-col px-margin-mobile py-4 gap-1">
+<span class="py-2 text-text-main font-label-caps text-label-caps border-b border-border-subtle/60">Programs</span>
+<a class="py-2 pl-4 text-on-surface-variant text-sm" href="weight-loss.html">Weight Loss</a>
+<a class="py-2 pl-4 text-on-surface-variant text-sm" href="pcod-pcos.html">PCOD / PCOS</a>
+<a class="py-2 pl-4 text-on-surface-variant text-sm" href="diabetes.html">Diabetes</a>
+<a class="py-2 pl-4 text-on-surface-variant text-sm" href="post-pregnancy.html">Post Pregnancy</a>
+<a class="py-2 pl-4 text-on-surface-variant text-sm" href="thyroid.html">Thyroid</a>
+<a class="py-2 pl-4 text-on-surface-variant text-sm pb-4 border-b border-border-subtle/60" href="kids-nutrition.html">Kids Nutrition</a>
+<a class="py-3 text-text-main font-label-caps text-label-caps border-b border-border-subtle/60" href="../index.html#why-us">Why Us</a>
+<a class="py-3 text-text-main font-label-caps text-label-caps border-b border-border-subtle/60" href="../index.html#stories">Stories</a>
+<a class="py-3 text-text-main font-label-caps text-label-caps border-b border-border-subtle/60" href="../index.html#how-it-works">How it Works</a>
+<a class="py-3 text-text-main font-label-caps text-label-caps" href="../index.html#faq">FAQ</a>
+<a class="mt-4 bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded text-center" href="tel:+917351189757">Call Now</a>
+<a class="mt-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded text-center flex items-center justify-center gap-2" href="https://wa.me/917351189757?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Sanchi%20Nutrition%20%26%20Wellness%20programs." rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp
+</a>
+</nav>
 </div>
 </header>
 <main>
@@ -341,21 +379,21 @@
 <h3 class="font-title-lg text-base text-primary mb-2">PCOD / PCOS</h3>
 </a>
 <!-- Post Pregnancy -->
-<a class="block group bg-surface rounded-xl p-6 border border-border-subtle hover:border-primary hover:shadow-sm transition-all text-center" href="../index.html#lead-form">
+<a class="block group bg-surface rounded-xl p-6 border border-border-subtle hover:border-primary hover:shadow-sm transition-all text-center" href="post-pregnancy.html">
 <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-surface-container overflow-hidden">
 <img alt="Post Pregnancy nutrition program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvT8YZwrbPgN1Xl9wOtVCf4_jU34eP-5o3fKBRVXjSfrgTaW4bH4ONjN7iESkXucNtl-JjUtunMdYX7wlIQUKxN7K2cSgmpGrCfL0VB_GtkwmxLztuuUA1r4luxkMJoxJichuv02Rra0uGW3CJvS1-90rtOPnOJsyQ2ZKDceW97s642aFRPve_orzzKsg3ahBqs_eeUwIsT7jHQHJNi9wAfYVWH9Cv9-R6v7rnM-_i4jWBqNFQbTvuTYGY"/>
 </div>
 <h3 class="font-title-lg text-base text-primary mb-2">Post Pregnancy</h3>
 </a>
 <!-- Thyroid -->
-<a class="block group bg-surface rounded-xl p-6 border border-border-subtle hover:border-primary hover:shadow-sm transition-all text-center" href="../index.html#lead-form">
+<a class="block group bg-surface rounded-xl p-6 border border-border-subtle hover:border-primary hover:shadow-sm transition-all text-center" href="thyroid.html">
 <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-surface-container overflow-hidden">
 <img alt="Thyroid management program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtTjH2dDDV9rd_sGsMIrFIW_G7pB4hhkCcqd1RnGYy_AMtFekUPErO8_gyLQrqXPHa42yNrJC6tTGx53T6wV1Px_cOuriEIrGzJKn3hRL1WryKJ8ky8QjS07_MEC60bswHtxNeuU_k-N--IrmnrD0yh9U_-NJ51Z6Qyr9i1KwUqyH2qL0HyOCIZ2596DSOF8Lc2gucuxO-FOFDWnE7QalGgBnbYsDkgyzqsxVLwYk6y-9-pxGEBfQ2Ni64"/>
 </div>
 <h3 class="font-title-lg text-base text-primary mb-2">Thyroid</h3>
 </a>
 <!-- Kids Nutrition -->
-<a class="block group bg-surface rounded-xl p-6 border border-border-subtle hover:border-primary hover:shadow-sm transition-all text-center sm:col-span-2 lg:col-span-1" href="../index.html#lead-form">
+<a class="block group bg-surface rounded-xl p-6 border border-border-subtle hover:border-primary hover:shadow-sm transition-all text-center sm:col-span-2 lg:col-span-1" href="kids-nutrition.html">
 <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-surface-container overflow-hidden">
 <img alt="Kids Nutrition program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuTjuzj7df9L6_kpo_RajcCB7S8hPxwodrYBcbDfi7_ylDrh5GYC1ei4TfacDN7pVuxmkFNZe9Lg1BBKDsZ8OM51SCyi5_4924n8vAg6hH1LAkKg6Qn35abGRY1w_cLmoQfYZvhieqpChaQRk8zaEJTLSisxsU2HuFFBZmuqqsO1XDlg4q_bmjRKmBykfTjJysB6JNb2KgyTwaEsGYsccew-r0qVGvMxb2CCfi3pvH2GpIA4jPxLuqLe4k"/>
 </div>
@@ -394,4 +432,26 @@
 </div>
 </div>
 </footer>
+<script>
+  (function () {
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    var icon = document.getElementById('mobile-menu-icon');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        icon.textContent = isOpen ? 'menu' : 'close';
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          icon.textContent = 'menu';
+        });
+      });
+    }
+  })();
+</script>
 </body></html>
