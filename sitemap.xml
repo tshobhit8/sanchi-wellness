@@ -21,6 +21,41 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sanchidietitian.in/Programs/post-pregnancy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/Programs/thyroid.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/Programs/kids-nutrition.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/blogs/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/blogs/is-indian-food-fattening.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/blogs/pcos-diet-plan-india.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/blogs/thyroid-weight-connection.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://sanchidietitian.in/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
