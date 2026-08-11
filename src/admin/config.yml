@@ -2,6 +2,7 @@ backend:
   name: github
   repo: tshobhit8/sanchi-wellness
   branch: main
+  base_url: https://sanchi-cms-auth.shobhittomar1.workers.dev
 
 publish_mode: editorial_workflow
 
