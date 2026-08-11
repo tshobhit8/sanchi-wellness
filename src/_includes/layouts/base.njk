@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{% if titleIsFull %}{{ title }}{% else %}{{ title }} | Sanchi Nutrition &amp; Wellness{% endif %}</title>
+<meta name="description" content="{{ description }}"/>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Lora and Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Lora:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001d33",
+                        "primary-fixed": "#cee5ff",
+                        "tertiary-container": "#4f3400",
+                        "primary": "#002640",
+                        "on-surface-variant": "#42474e",
+                        "forest-deep": "#283F24",
+                        "secondary-fixed": "#bbf293",
+                        "on-primary-container": "#82a7cc",
+                        "surface-tint": "#3d6183",
+                        "inverse-primary": "#a5caf1",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#234a6a",
+                        "surface-container-high": "#eae8e3",
+                        "on-secondary-fixed-variant": "#245102",
+                        "inverse-surface": "#30312e",
+                        "tertiary-fixed": "#ffdead",
+                        "border-subtle": "#E7E2D7",
+                        "tertiary": "#332000",
+                        "on-background": "#1b1c19",
+                        "text-main": "#2B2A28",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fbf9f4",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#b8ef91",
+                        "interactive-blue": "#1D71B8",
+                        "surface-container-highest": "#e4e2dd",
+                        "outline": "#73777e",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0eee9",
+                        "surface-variant": "#e4e2dd",
+                        "on-surface": "#1b1c19",
+                        "primary-container": "#123c5c",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-dim": "#dbdad5",
+                        "on-tertiary-fixed": "#281900",
+                        "primary-fixed-dim": "#a5caf1",
+                        "on-secondary-container": "#3f6e20",
+                        "outline-variant": "#c2c7ce",
+                        "surface-container-low": "#f5f3ee",
+                        "on-tertiary-container": "#d19935",
+                        "on-secondary-fixed": "#0a2100",
+                        "surface": "#fbf9f4",
+                        "tertiary-fixed-dim": "#f9bc55",
+                        "secondary-fixed-dim": "#a0d57a",
+                        "secondary": "#3b6a1b",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "on-primary": "#ffffff",
+                        "background": "#fbf9f4",
+                        "accent-green": "#5B8C3A",
+                        "cta-gold": "#C9922E"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-gap-desktop": "120px",
+                        "base": "8px",
+                        "section-gap-mobile": "64px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    fontFamily: {
+                        "label-caps": ["Inter"],
+                        "headline-md-mobile": ["Lora"],
+                        "headline-md": ["Lora"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Lora"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Lora"],
+                        "title-lg": ["Lora"]
+                    },
+                    fontSize: {
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "title-lg": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        html { scroll-behavior: smooth; }
+        .card-border {
+            border: 1px solid #E7E2D7;
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(18, 60, 92, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #5B8C3A, #C9922E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+            padding-top: 8px;
+            padding-bottom: 24px;
+        }
+        .faq-item.active .material-symbols-outlined.expand-icon {
+            transform: rotate(180deg);
+        }
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+    </style>
+{% if jsonld %}
+{{ jsonld | safe }}
+{% endif %}
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+{% include "partials/header.njk" %}
+<main>
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+<script>
+  (function () {
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    var icon = document.getElementById('mobile-menu-icon');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        icon.textContent = isOpen ? 'menu' : 'close';
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          icon.textContent = 'menu';
+        });
+      });
+    }
+  })();
+
+  // FAQ Accordion Logic (only present on the homepage)
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    var button = item.querySelector('.faq-button');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      var isActive = item.classList.contains('active');
+      faqItems.forEach(function (other) { other.classList.remove('active'); });
+      if (!isActive) { item.classList.add('active'); }
+    });
+  });
+</script>
+</body>
+</html>

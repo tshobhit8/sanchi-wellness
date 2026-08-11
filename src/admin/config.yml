@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: tshobhit8/sanchi-wellness
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "src/assets/blog-images"
+public_folder: "/assets/blog-images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/blogs/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/blog-post.njk" }
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/blogs/{{ page.fileSlug }}/index.html" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short Description (for SEO and blog cards)", name: "description", widget: "text" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Weight Loss"
+          - "PCOD / PCOS"
+          - "Diabetes"
+          - "Post Pregnancy"
+          - "Thyroid"
+          - "Kids Nutrition"
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Read Time", name: "readTime", widget: "string", default: "5 min read" }
+      - { label: "Hero Image", name: "heroImage", widget: "image" }
+      - { label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string" }
+      - label: "Sidebar Images (shown alongside the article)"
+        name: "sidebarImages"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Image", name: "src", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+      - label: "Table of Contents"
+        name: "toc"
+        widget: "list"
+        hint: "Each entry needs an ID (no spaces, e.g. 'signs') that matches a <div id=\"...\"> wrapper you add around that section in the body below."
+        fields:
+          - { label: "Section ID (no spaces)", name: "id", widget: "string" }
+          - { label: "Section Title", name: "title", widget: "string" }
+      - { label: "Closing CTA Text", name: "ctaText", widget: "string", required: false }
+      - { label: "Closing CTA Link Text", name: "ctaLinkText", widget: "string", required: false }
+      - { label: "Closing CTA Link (e.g. /Programs/weight-loss/)", name: "ctaLinkHref", widget: "string", required: false }
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Wrap each section in <div id=\"your-id\"></div> (matching the Table of Contents IDs above), with a blank line after the opening tag. Use ## for section headings inside each div."

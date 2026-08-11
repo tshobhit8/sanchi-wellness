@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Blog
+description: Nutrition tips, myth-busting, and practical Indian diet advice from Sanchi Nutrition & Wellness — weight loss, PCOD/PCOS, diabetes, thyroid and more.
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Sanchi Nutrition & Wellness Blog",
+    "description": "Nutrition tips, myth-busting, and practical Indian diet advice from Sanchi Nutrition & Wellness."
+  }
+  </script>
+---
+<!-- Page Header -->
+<section class="pt-14 pb-10 md:pt-20 md:pb-14 px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 font-serif">The Sanchi Blog</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Practical nutrition guidance, myth-busting, and real Indian diet advice for weight loss, PCOD/PCOS, diabetes, thyroid, and more.</p>
+</section>
+<!-- Blog Grid -->
+<section class="pb-section-gap-mobile md:pb-section-gap-desktop px-margin-mobile md:px-gutter">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+{% for post in collections.blogPosts %}
+<a class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col items-start hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-border-subtle" href="{{ post.url }}">
+<img alt="{{ post.data.heroImageAlt }}" class="w-full h-48 object-cover rounded-xl mb-6" src="{{ post.data.heroImage }}"/>
+<span class="font-label-caps text-label-caps text-accent-green mb-3">{{ post.data.category }}</span>
+<h3 class="font-title-lg text-title-lg text-primary mb-3">{{ post.data.title }}</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">{{ post.data.description }}</p>
+<span class="font-label-caps text-label-caps border border-accent-green text-accent-green group-hover:bg-accent-green w-full py-3 rounded text-center flex items-center justify-center gap-2 group mt-auto">Read more <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+</a>
+{% endfor %}
+</div>
+</section>
