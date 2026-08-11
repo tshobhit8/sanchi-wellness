@@ -1,0 +1,14 @@
+{
+  "name": "sanchi-wellness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sanchi Nutrition & Wellness website, built with Eleventy.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
