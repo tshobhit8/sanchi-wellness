@@ -189,8 +189,11 @@
         .faq-toggle { transition: transform 0.2s ease; }
         .card-hover { transition: box-shadow .2s ease; }
         .card-hover:hover { box-shadow: 0 16px 36px oklch(20% 0.02 75 / 0.12); }
+        .carousel-track { scrollbar-width: none; -ms-overflow-style: none; }
+        .carousel-track::-webkit-scrollbar { display: none; }
         @media (max-width: 760px) {
             .main-nav { display: none !important; }
+            .utility-bar { display: none !important; }
             .grid-2 { grid-template-columns: 1fr !important; }
             .grid-3 { grid-template-columns: 1fr !important; }
             .grid-5 { grid-template-columns: repeat(2, 1fr) !important; }
@@ -198,6 +201,19 @@
             .footer-grid { grid-template-columns: 1fr 1fr !important; }
             .mobile-cta-bar { display: flex !important; }
             body.has-mobile-cta { padding-bottom: 68px; }
+            .hero-stats { gap: 10px !important; justify-content: space-between !important; }
+            .hero-stats .stat-value { font-size: 16px !important; }
+            .hero-stats .stat-label { font-size: 9px !important; }
+            .how-it-works-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; }
+            .how-it-works-grid .step-circle { width: 34px !important; height: 34px !important; font-size: 13px !important; margin-bottom: 8px !important; }
+            .how-it-works-grid .step-title { font-size: 11.5px !important; margin-bottom: 4px !important; }
+            .how-it-works-grid .step-desc { font-size: 9.5px !important; line-height: 1.35 !important; }
+            .floating-cta { bottom: 84px !important; width: 52px !important; height: 52px !important; }
+            .footer-section { padding-top: 32px !important; padding-bottom: 18px !important; }
+            .footer-section .footer-grid { gap: 26px 20px !important; padding-bottom: 22px !important; }
+            .footer-section .footer-col-title { font-size: 11.5px !important; margin-bottom: 10px !important; }
+            .footer-section .footer-links { gap: 8px !important; font-size: 12.5px !important; }
+            .footer-section .footer-brand-desc { font-size: 12.5px !important; }
         }
     </style>
 {% if jsonld %}
@@ -215,18 +231,28 @@
 <a class="flex-1 bg-accent text-white text-center py-3 rounded-lg no-underline font-bold text-sm" href="tel:+917351189757">Call Now</a>
 <a class="flex-1 bg-accent-light text-accent-text-dark text-center py-3 rounded-lg no-underline font-bold text-sm" href="https://wa.me/917351189757?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Sanchi%20Nutrition%20%26%20Wellness%20programs." rel="noopener" target="_blank">WhatsApp</a>
 </div>
+<!-- Floating Book-Consultation Button -->
+<a aria-label="Book free consultation" class="floating-cta fixed right-5 bottom-6 z-40 bg-accent text-white rounded-full w-14 h-14 flex items-center justify-center shadow-[0_10px_28px_rgba(0,0,0,0.25)] no-underline hover:opacity-90 transition-opacity" href="#lead-form" id="floating-cta">
+<span class="material-symbols-outlined text-2xl">edit_calendar</span>
+</a>
 <script>
   (function () {
     var toggle = document.getElementById('mobile-menu-toggle');
     var menu = document.getElementById('mobile-menu');
     var icon = document.getElementById('mobile-menu-icon');
+    var header = document.querySelector('.site-header');
+    function positionMenu() {
+      if (header) { menu.style.top = header.getBoundingClientRect().bottom + 'px'; }
+    }
     if (toggle && menu) {
       toggle.addEventListener('click', function () {
         var isOpen = !menu.classList.contains('hidden');
+        if (!isOpen) { positionMenu(); }
         menu.classList.toggle('hidden');
         toggle.setAttribute('aria-expanded', String(!isOpen));
         icon.textContent = isOpen ? 'menu' : 'close';
       });
+      window.addEventListener('resize', positionMenu);
       menu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
           menu.classList.add('hidden');
@@ -235,6 +261,12 @@
         });
       });
     }
+  })();
+
+  // Floating CTA: link to the in-page lead form if one exists, else the homepage's
+  (function () {
+    var fab = document.getElementById('floating-cta');
+    if (fab && !document.getElementById('lead-form')) { fab.setAttribute('href', '/#lead-form'); }
   })();
 
   // FAQ Accordion — single-open-at-a-time
@@ -249,37 +281,58 @@
     });
   });
 
-  // Testimonial carousel — paged, 3 cards/page desktop, wraps both ends
+  // Testimonial carousel — single card at a time, auto-advancing, swipeable, wraps both ends
   var carousel = document.getElementById('testimonial-carousel');
   if (carousel) {
     var track = carousel.querySelector('.carousel-track');
     var cards = Array.from(track.children);
-    var perPage = 3;
-    var pageCount = Math.ceil(cards.length / perPage);
-    var page = 0;
+    var count = cards.length;
+    var current = 0;
     var dotsWrap = carousel.querySelector('.carousel-dots');
     var dots = [];
-    for (var i = 0; i < pageCount; i++) {
+    var autoplayTimer = null;
+    for (var i = 0; i < count; i++) {
       var d = document.createElement('span');
       d.className = 'w-2 h-2 rounded-full cursor-pointer transition-colors';
-      d.addEventListener('click', (function (idx) { return function () { goTo(idx); }; })(i));
+      d.addEventListener('click', (function (idx) { return function () { goTo(idx); restartAutoplay(); }; })(i));
       dotsWrap.appendChild(d);
       dots.push(d);
     }
     function render() {
-      cards.forEach(function (card, idx) {
-        card.style.display = (idx >= page * perPage && idx < page * perPage + perPage) ? '' : 'none';
-      });
       dots.forEach(function (d, idx) {
-        d.style.background = idx === page ? 'var(--color-accent)' : 'var(--color-hairline)';
+        d.style.background = idx === current ? 'var(--color-accent)' : 'var(--color-hairline)';
       });
     }
-    function goTo(idx) { page = (idx + pageCount) % pageCount; render(); }
+    function goTo(idx) {
+      current = (idx + count) % count;
+      cards[current].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      render();
+    }
+    function startAutoplay() {
+      autoplayTimer = setInterval(function () { goTo(current + 1); }, 4500);
+    }
+    function restartAutoplay() {
+      if (autoplayTimer) clearInterval(autoplayTimer);
+      startAutoplay();
+    }
     var prevBtn = carousel.querySelector('.carousel-prev');
     var nextBtn = carousel.querySelector('.carousel-next');
-    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(page - 1); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(page + 1); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); restartAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); restartAutoplay(); });
+    // Keep dots in sync when the user swipes/scrolls the track manually
+    var scrollTimeout;
+    track.addEventListener('scroll', function () {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function () {
+        var idx = Math.round(track.scrollLeft / track.clientWidth);
+        current = Math.max(0, Math.min(count - 1, idx));
+        render();
+      }, 100);
+    });
+    track.addEventListener('pointerdown', function () { if (autoplayTimer) clearInterval(autoplayTimer); });
+    track.addEventListener('pointerup', restartAutoplay);
     render();
+    startAutoplay();
   }
 </script>
 </body>
