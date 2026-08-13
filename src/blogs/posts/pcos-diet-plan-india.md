@@ -6,24 +6,8 @@ description: A practical PCOS diet plan for Indian kitchens - what to eat, what 
 category: PCOD / PCOS
 date: 2026-08-05
 readTime: 7 min read
-heroImage: https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80
+heroImage: /assets/images/blog-pcos-diet.jpg
 heroImageAlt: A colorful bowl of Indian vegetables, lentils and whole grains suited to a PCOS-friendly diet
-sidebarImages:
-  - src: https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=80
-    alt: Millets, lentils and whole grains suited for insulin resistance management
-  - src: https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80
-    alt: A high-fiber Indian meal with dal, vegetables and roti
-toc:
-  - id: understanding
-    title: Understanding PCOS and Insulin Resistance
-  - id: eat
-    title: Foods That Help Manage PCOS Naturally
-  - id: avoid
-    title: "Foods to Limit (Not Eliminate)"
-  - id: sample-day
-    title: Sample Day on a PCOS-Friendly Indian Diet
-  - id: lifestyle
-    title: "Beyond Diet: Lifestyle Factors That Matter"
 ctaText: Ready for a PCOS nutrition plan built around your symptoms?
 ctaLinkText: Explore our PCOD / PCOS program
 ctaLinkHref: /Programs/pcod-pcos/

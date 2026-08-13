@@ -1,0 +1,136 @@
+<!-- Breadcrumb is part of the sticky header nav on program pages -->
+<nav class="max-w-[1280px] mx-auto px-6 pt-5 text-[13px] text-ink-muted flex items-center gap-2">
+<a class="text-inherit no-underline hover:text-accent-text-dark" href="/">Home</a><span>/</span>
+<a class="text-inherit no-underline hover:text-accent-text-dark" href="/#programs">Programs</a><span>/</span>
+<span class="text-ink font-semibold">{{ heroBadge }}</span>
+</nav>
+
+<!-- HERO -->
+<section class="max-w-[1280px] mx-auto px-6 pt-8 pb-12 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 md:gap-14 items-center stack-grid">
+<div>
+<div class="inline-block bg-accent-light text-accent-text-dark px-3.5 py-1.5 rounded-full text-[13px] font-semibold mb-5">{{ heroBadge }}</div>
+<h1 class="font-display text-4xl md:text-[46px] leading-[1.15] font-semibold mb-5 -tracking-[0.5px]">{{ heroTitle }}</h1>
+<p class="text-[17px] text-ink-muted max-w-[480px] mb-7">{{ heroSubtitle }}</p>
+<div class="flex gap-3.5 flex-wrap">
+<a class="bg-accent text-white px-[26px] py-[14px] rounded-lg no-underline font-semibold text-[15px] hover:opacity-90 transition-opacity" href="#lead-form">Start Your Journey →</a>
+<a class="bg-transparent text-ink border-[1.5px] border-hairline px-[26px] py-[14px] rounded-lg no-underline font-semibold text-[15px] hover:bg-card transition-colors" href="tel:+917351189757">Call Now</a>
+</div>
+</div>
+<img alt="{{ heroImageAlt }}" class="w-full aspect-[4/5] object-cover rounded-[20px]" src="{{ heroImage }}"/>
+</section>
+
+<!-- STATS BAR -->
+<section class="max-w-[1280px] mx-auto px-6 pb-14 md:pb-16">
+<div class="bg-accent-dark rounded-[20px] p-9 grid grid-cols-2 md:grid-cols-4 gap-6 text-white grid-2">
+{% for stat in stats %}
+<div class="text-center">
+<div class="font-display text-[26px] md:text-[28px] font-semibold">{{ stat.value }}</div>
+<div class="text-[13px] opacity-75">{{ stat.label }}</div>
+</div>
+{% endfor %}
+</div>
+</section>
+
+<!-- LEAD FORM -->
+<section id="lead-form" class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 items-center stack-grid">
+<div>
+<h2 class="font-display text-[26px] md:text-[32px] font-semibold mb-4">Start your transformation today</h2>
+<p class="text-base text-ink-muted max-w-[420px] m-0">Free 20-minute consultation. No obligation, just clarity on what a real plan for your body looks like.</p>
+</div>
+<div class="bg-card border border-hairline rounded-2xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.06)]">
+<form class="flex flex-col gap-3.5" id="leadForm{{ formId }}">
+<input name="sourcePage" type="hidden" value="{{ sourcePage }}"/>
+<input name="condition" type="hidden" value="{{ condition }}"/>
+<label class="text-[13px] font-semibold">Name
+<input class="block w-full mt-1.5 px-3.5 py-3 rounded-lg border border-hairline text-[15px] font-sans" name="name" placeholder="Your name" required="" type="text"/>
+</label>
+<label class="text-[13px] font-semibold">Phone
+<input class="block w-full mt-1.5 px-3.5 py-3 rounded-lg border border-hairline text-[15px] font-sans" name="phone" placeholder="+91 " required="" type="tel"/>
+</label>
+<button class="mt-2 bg-accent text-white border-0 py-3.5 rounded-lg font-bold text-[15px] cursor-pointer hover:opacity-90 transition-opacity" id="submitBtn{{ formId }}" type="submit">Get Free Consultation</button>
+</form>
+</div>
+</section>
+<script>
+  (function () {
+    var scriptURL = 'https://script.google.com/macros/s/AKfycbxntbgS4pcmNaob3IMRXtblOp45zZ3CxJpJTXesFrT-UCItr7An6Lo6XCa1HR7EbBqP/exec';
+    var form = document.getElementById('leadForm{{ formId }}');
+    var btn = document.getElementById('submitBtn{{ formId }}');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.innerText = 'Submitting...';
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(function () {
+          alert('Thank you! Your details have been submitted.');
+          form.reset();
+          btn.disabled = false;
+          btn.innerText = 'Get Free Consultation';
+        })
+        .catch(function () {
+          alert('Something went wrong. Please try again.');
+          btn.disabled = false;
+          btn.innerText = 'Get Free Consultation';
+        });
+    });
+  })();
+</script>
+
+<!-- TESTIMONIALS -->
+<section class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20">
+<h2 class="font-display text-[26px] md:text-[32px] font-semibold mb-2 text-center">Real people, real results</h2>
+<p class="text-center text-ink-muted text-base mb-9">See how customized nutrition plans transformed lives — without giving up the joy of eating.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 grid-2">
+{% for t in testimonials %}
+<div class="bg-card border border-hairline rounded-2xl p-6 flex gap-4">
+<img alt="{{ t.name }}" class="w-14 h-14 rounded-full object-cover shrink-0" src="{{ t.image }}"/>
+<div>
+<div class="text-xs font-bold text-accent-text-dark mb-1.5">✓ Verified Result</div>
+<div class="font-display font-semibold text-base mb-1.5">{{ t.result }}</div>
+<p class="text-sm text-ink-muted m-0">"{{ t.quote }}" — {{ t.name }}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+</section>
+
+<!-- APPROACH -->
+<section class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 md:gap-14 items-center stack-grid">
+<img alt="{{ approachImageAlt }}" class="w-full aspect-[4/3] object-cover rounded-2xl" src="{{ approachImage }}"/>
+<div>
+<h2 class="font-display text-2xl md:text-[30px] font-semibold mb-6">{{ approachTitle }}</h2>
+<div class="flex flex-col gap-5">
+{% for item in approachItems %}
+<div>
+<div class="font-bold text-base mb-1.5">{{ item.title }}</div>
+<div class="text-[14.5px] text-ink-muted">{{ item.text }}</div>
+</div>
+{% endfor %}
+</div>
+</div>
+</section>
+
+<!-- OTHER PROGRAMS -->
+<section class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20">
+<div class="flex justify-between items-center mb-7 flex-wrap gap-3">
+<h2 class="font-display text-2xl md:text-[28px] font-semibold m-0">Explore our other wellness programs</h2>
+<a class="hidden md:inline-block font-bold text-sm text-accent no-underline" href="/#programs">View All Programs →</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4 grid-5">
+{% for p in programs %}
+{% if p.slug != slug %}
+<a class="no-underline text-inherit bg-card border border-hairline rounded-xl overflow-hidden" href="/Programs/{{ p.slug }}/">
+<img alt="{{ p.name }} program" class="w-full h-[100px] object-cover" src="{{ p.image }}"/>
+<div class="p-3 text-[13px] font-bold text-center">{{ p.name }}</div>
+</a>
+{% endif %}
+{% endfor %}
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="bg-paper-warm py-16 md:py-[70px] px-6 text-center">
+<h2 class="font-display text-[26px] md:text-[30px] font-semibold mb-3">Ready to transform your health?</h2>
+<p class="text-base text-ink-muted mb-6">Get a personalized plan tailored to your lifestyle.</p>
+<a class="bg-accent text-white px-[26px] py-[14px] rounded-lg no-underline font-bold text-[15px]" href="#lead-form">Book Consultation</a>
+</section>

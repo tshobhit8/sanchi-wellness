@@ -6,24 +6,8 @@ description: Understand the thyroid-weight connection, the signs your thyroid mi
 category: Thyroid
 date: 2026-08-08
 readTime: 6 min read
-heroImage: https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=1200&q=80
+heroImage: /assets/images/blog-thyroid-weight.jpg
 heroImageAlt: A nutrient-dense Indian meal with iodine-rich and nutrient-dense ingredients supportive of thyroid health
-sidebarImages:
-  - src: https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80
-    alt: Nutrient-dense foods including nuts, seeds and vegetables that support thyroid health
-  - src: https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80
-    alt: A balanced plate supporting metabolism and thyroid function
-toc:
-  - id: connection
-    title: The Thyroid-Weight Connection Explained
-  - id: signs
-    title: Signs Your Thyroid Might Be Affecting Your Weight
-  - id: nutrition
-    title: Nutrition Strategies for Hypothyroidism
-  - id: nutrients
-    title: Foods and Nutrients That Support Thyroid Function
-  - id: medication
-    title: Working With Your Medication, Not Against It
 ctaText: Want a nutrition plan that works with your thyroid medication?
 ctaLinkText: Explore our Thyroid program
 ctaLinkHref: /Programs/thyroid/

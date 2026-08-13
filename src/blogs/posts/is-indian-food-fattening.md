@@ -6,24 +6,8 @@ description: Indian food has a reputation for being fattening, but that's a myth
 category: Weight Loss
 date: 2026-08-01
 readTime: 6 min read
-heroImage: https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=80
+heroImage: /assets/images/blog-indian-food.jpg
 heroImageAlt: A vibrant, balanced Indian thali with dal, vegetables, roti and rice on a wooden table
-sidebarImages:
-  - src: https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80
-    alt: Fresh lentils, vegetables and spices used in traditional Indian home cooking
-  - src: https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80
-    alt: A balanced home-cooked Indian thali with dal, sabzi, roti and salad
-toc:
-  - id: myth
-    title: "The Myth: Why Indian Food Gets a Bad Reputation"
-  - id: traditional
-    title: What Traditional Indian Diets Actually Look Like
-  - id: culprits
-    title: The Real Culprits Behind Weight Gain
-  - id: plate
-    title: How to Build a Balanced Indian Plate
-  - id: takeaways
-    title: Key Takeaways
 ctaText: Want a weight loss plan built around real Indian food?
 ctaLinkText: Explore our Weight Loss program
 ctaLinkHref: /Programs/weight-loss/

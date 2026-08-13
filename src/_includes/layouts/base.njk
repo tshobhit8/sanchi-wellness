@@ -8,10 +8,10 @@
 <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
 <!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Google Fonts: Lora and Inter -->
+<!-- Google Fonts: Lora (display) and Work Sans (body) -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Lora:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
@@ -22,6 +22,25 @@
             theme: {
                 extend: {
                     colors: {
+                        /* 2026 redesign tokens — sourced from CSS custom properties below,
+                           so the accent/warm colors stay swappable in one place (:root). */
+                        "accent": "var(--color-accent)",
+                        "accent-light": "var(--color-accent-light)",
+                        "accent-text-dark": "var(--color-accent-text-dark)",
+                        "accent-dark": "var(--color-accent-dark)",
+                        "warm": "var(--color-warm)",
+                        "ink": "var(--color-ink)",
+                        "ink-muted": "var(--color-ink-muted)",
+                        "paper": "var(--color-paper)",
+                        "paper-soft": "var(--color-paper-soft)",
+                        "paper-warm": "var(--color-paper-warm)",
+                        "card": "var(--color-card)",
+                        "hairline": "var(--color-hairline)",
+                        "footer-ink": "var(--color-footer-ink)",
+                        "gold-star": "var(--color-gold-star)",
+
+                        /* Legacy tokens — still used by About/Privacy/Terms page bodies,
+                           which weren't part of the 2026 visual redesign. */
                         "on-tertiary": "#ffffff",
                         "on-primary-fixed": "#001d33",
                         "primary-fixed": "#cee5ff",
@@ -91,12 +110,14 @@
                         "margin-mobile": "20px"
                     },
                     fontFamily: {
-                        "label-caps": ["Inter"],
+                        "display": ["Lora", "serif"],
+                        "sans": ["Work Sans", "sans-serif"],
+                        "label-caps": ["Inter", "Work Sans", "sans-serif"],
                         "headline-md-mobile": ["Lora"],
                         "headline-md": ["Lora"],
-                        "body-md": ["Inter"],
+                        "body-md": ["Inter", "Work Sans", "sans-serif"],
                         "display-lg": ["Lora"],
-                        "body-lg": ["Inter"],
+                        "body-lg": ["Inter", "Work Sans", "sans-serif"],
                         "display-lg-mobile": ["Lora"],
                         "title-lg": ["Lora"]
                     },
@@ -115,10 +136,29 @@
         }
     </script>
 <style>
+        /* 2026 redesign palette. Change --color-accent / --color-warm here to
+           re-theme the whole site — every derived shade below follows automatically. */
+        :root {
+            --color-accent: #16a34a;
+            --color-warm: #ea580c;
+            --color-accent-light: color-mix(in srgb, var(--color-accent) 14%, white);
+            --color-accent-text-dark: color-mix(in srgb, var(--color-accent) 75%, black);
+            --color-accent-dark: color-mix(in srgb, var(--color-accent) 45%, black);
+            --color-ink: oklch(22% 0.015 75);
+            --color-ink-muted: oklch(42% 0.02 75);
+            --color-paper: oklch(98% 0.012 75);
+            --color-paper-soft: oklch(96% 0.015 80);
+            --color-paper-warm: oklch(96% 0.03 45);
+            --color-card: oklch(99% 0.01 90);
+            --color-hairline: oklch(88% 0.015 75);
+            --color-footer-ink: oklch(20% 0.015 75);
+            --color-gold-star: oklch(58% 0.13 70);
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         html { scroll-behavior: smooth; }
+        body { background: var(--color-paper); }
         .card-border {
             border: 1px solid #E7E2D7;
         }
@@ -142,25 +182,39 @@
             max-height: 500px;
             opacity: 1;
             padding-top: 8px;
-            padding-bottom: 24px;
+            padding-bottom: 22px;
         }
-        .faq-item.active .material-symbols-outlined.expand-icon {
-            transform: rotate(180deg);
-        }
-        .expand-icon {
-            transition: transform 0.3s ease;
+        .faq-item.active { border-color: var(--color-accent) !important; box-shadow: 0 12px 28px oklch(20% 0.02 75 / 0.08); }
+        .faq-item.active .faq-toggle { transform: rotate(45deg); }
+        .faq-toggle { transition: transform 0.2s ease; }
+        .card-hover { transition: box-shadow .2s ease; }
+        .card-hover:hover { box-shadow: 0 16px 36px oklch(20% 0.02 75 / 0.12); }
+        @media (max-width: 760px) {
+            .main-nav { display: none !important; }
+            .grid-2 { grid-template-columns: 1fr !important; }
+            .grid-3 { grid-template-columns: 1fr !important; }
+            .grid-5 { grid-template-columns: repeat(2, 1fr) !important; }
+            .stack-grid { grid-template-columns: 1fr !important; }
+            .footer-grid { grid-template-columns: 1fr 1fr !important; }
+            .mobile-cta-bar { display: flex !important; }
+            body.has-mobile-cta { padding-bottom: 68px; }
         }
     </style>
 {% if jsonld %}
 {{ jsonld | safe }}
 {% endif %}
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased">
+<body class="bg-paper text-ink font-sans antialiased has-mobile-cta">
 {% include "partials/header.njk" %}
 <main>
 {{ content | safe }}
 </main>
 {% include "partials/footer.njk" %}
+<!-- Mobile Sticky CTA Bar -->
+<div class="mobile-cta-bar fixed bottom-0 left-0 right-0 hidden bg-card border-t border-hairline px-4 py-2.5 gap-2.5 z-50 shadow-[0_-8px_24px_rgba(0,0,0,0.1)]">
+<a class="flex-1 bg-accent text-white text-center py-3 rounded-lg no-underline font-bold text-sm" href="tel:+917351189757">Call Now</a>
+<a class="flex-1 bg-accent-light text-accent-text-dark text-center py-3 rounded-lg no-underline font-bold text-sm" href="https://wa.me/917351189757?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Sanchi%20Nutrition%20%26%20Wellness%20programs." rel="noopener" target="_blank">WhatsApp</a>
+</div>
 <script>
   (function () {
     var toggle = document.getElementById('mobile-menu-toggle');
@@ -183,7 +237,7 @@
     }
   })();
 
-  // FAQ Accordion Logic (only present on the homepage)
+  // FAQ Accordion — single-open-at-a-time
   var faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(function (item) {
     var button = item.querySelector('.faq-button');
@@ -194,6 +248,39 @@
       if (!isActive) { item.classList.add('active'); }
     });
   });
+
+  // Testimonial carousel — paged, 3 cards/page desktop, wraps both ends
+  var carousel = document.getElementById('testimonial-carousel');
+  if (carousel) {
+    var track = carousel.querySelector('.carousel-track');
+    var cards = Array.from(track.children);
+    var perPage = 3;
+    var pageCount = Math.ceil(cards.length / perPage);
+    var page = 0;
+    var dotsWrap = carousel.querySelector('.carousel-dots');
+    var dots = [];
+    for (var i = 0; i < pageCount; i++) {
+      var d = document.createElement('span');
+      d.className = 'w-2 h-2 rounded-full cursor-pointer transition-colors';
+      d.addEventListener('click', (function (idx) { return function () { goTo(idx); }; })(i));
+      dotsWrap.appendChild(d);
+      dots.push(d);
+    }
+    function render() {
+      cards.forEach(function (card, idx) {
+        card.style.display = (idx >= page * perPage && idx < page * perPage + perPage) ? '' : 'none';
+      });
+      dots.forEach(function (d, idx) {
+        d.style.background = idx === page ? 'var(--color-accent)' : 'var(--color-hairline)';
+      });
+    }
+    function goTo(idx) { page = (idx + pageCount) % pageCount; render(); }
+    var prevBtn = carousel.querySelector('.carousel-prev');
+    var nextBtn = carousel.querySelector('.carousel-next');
+    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(page - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(page + 1); });
+    render();
+  }
 </script>
 </body>
 </html>

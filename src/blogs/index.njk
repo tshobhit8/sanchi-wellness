@@ -12,22 +12,80 @@ jsonld: |
   }
   </script>
 ---
-<!-- Page Header -->
-<section class="pt-14 pb-10 md:pt-20 md:pb-14 px-margin-mobile md:px-gutter max-w-container-max mx-auto text-center">
-<h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 font-serif">The Sanchi Blog</h1>
-<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Practical nutrition guidance, myth-busting, and real Indian diet advice for weight loss, PCOD/PCOS, diabetes, thyroid, and more.</p>
+<!-- HERO -->
+<section class="max-w-[900px] mx-auto px-6 pt-14 md:pt-16 pb-8 text-center">
+<div class="inline-block bg-accent-light text-accent-text-dark px-3.5 py-1.5 rounded-full text-[13px] font-semibold mb-5">The Sanchi Blog</div>
+<h1 class="font-display text-4xl md:text-[42px] leading-[1.15] font-semibold mb-4">Nutrition guidance you can actually trust</h1>
+<p class="text-[17px] text-ink-muted m-0">Practical, myth-busting Indian diet advice — written and medically reviewed by a registered dietitian.</p>
 </section>
-<!-- Blog Grid -->
-<section class="pb-section-gap-mobile md:pb-section-gap-desktop px-margin-mobile md:px-gutter">
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-{% for post in collections.blogPosts %}
-<a class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col items-start hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-border-subtle" href="{{ post.url }}">
-<img alt="{{ post.data.heroImageAlt }}" class="w-full h-48 object-cover rounded-xl mb-6" src="{{ post.data.heroImage }}"/>
-<span class="font-label-caps text-label-caps text-accent-green mb-3">{{ post.data.category }}</span>
-<h3 class="font-title-lg text-title-lg text-primary mb-3">{{ post.data.title }}</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">{{ post.data.description }}</p>
-<span class="font-label-caps text-label-caps border border-accent-green text-accent-green group-hover:bg-accent-green w-full py-3 rounded text-center flex items-center justify-center gap-2 group mt-auto">Read more <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+
+{% set posts = collections.blogPosts %}
+
+<!-- FEATURED POST -->
+{% if posts.length > 0 %}
+{% set featured = posts[0] %}
+<section class="max-w-[1280px] mx-auto px-6 pb-14">
+<a class="no-underline text-inherit grid grid-cols-1 md:grid-cols-2 bg-card border border-hairline rounded-[20px] overflow-hidden min-h-[340px] grid-3" href="{{ featured.url }}">
+<img alt="{{ featured.data.heroImageAlt }}" class="w-full h-[260px] md:h-[340px] object-cover" src="{{ featured.data.heroImage }}"/>
+<div class="p-8 md:p-10 flex flex-col justify-center gap-3">
+<div class="text-[11px] font-bold uppercase tracking-[0.06em] text-warm">Featured</div>
+<h2 class="font-display text-2xl md:text-[26px] font-semibold m-0 leading-[1.25]">{{ featured.data.title }}</h2>
+<p class="text-[14.5px] text-ink-muted m-0">{{ featured.data.description }}</p>
+<div class="flex items-center gap-2.5 text-[12.5px] text-ink-muted mt-2">
+<img alt="Sanchi Singh" class="w-[26px] h-[26px] rounded-full object-cover" src="/assets/images/sanchi-avatar.jpg"/>
+<span>Sanchi Singh</span><span class="opacity-50">·</span><span>{{ featured.data.date | readableDate }}</span><span class="opacity-50">·</span><span>{{ featured.data.readTime }}</span>
+</div>
+</div>
 </a>
+</section>
+{% endif %}
+
+<!-- ARTICLE GRID -->
+<section class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 grid-3">
+{% for post in posts %}
+{% if loop.index > 1 %}
+<a class="no-underline text-inherit bg-card border border-hairline rounded-2xl overflow-hidden flex flex-col" href="{{ post.url }}">
+<img alt="{{ post.data.heroImageAlt }}" class="w-full h-[170px] object-cover" src="{{ post.data.heroImage }}"/>
+<div class="p-5 flex flex-col gap-2 flex-1">
+<div class="font-display text-[17px] font-semibold leading-tight">{{ post.data.title }}</div>
+<p class="text-[13.5px] text-ink-muted m-0 flex-1">{{ post.data.description }}</p>
+<div class="flex items-center gap-2 text-xs text-ink-muted pt-2.5 border-t border-hairline mt-1">
+<img alt="Sanchi Singh" class="w-[20px] h-[20px] rounded-full object-cover" src="/assets/images/sanchi-avatar.jpg"/>
+<span>Sanchi Singh</span><span class="opacity-50">·</span><span>{{ post.data.date | readableDate }}</span><span class="opacity-50">·</span><span>{{ post.data.readTime }}</span>
+</div>
+</div>
+</a>
+{% endif %}
 {% endfor %}
 </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20">
+<div class="bg-accent-dark rounded-3xl p-10 md:p-14 text-center text-white">
+<h2 class="font-display text-2xl md:text-[28px] font-semibold mb-2.5">Get weekly nutrition tips</h2>
+<p class="text-[15px] opacity-80 mb-6">Practical Indian-diet guidance in your inbox. No spam.</p>
+<form class="flex gap-2.5 justify-center max-w-[420px] mx-auto flex-wrap" id="newsletterForm">
+<input class="flex-1 min-w-[200px] px-4 py-3.5 rounded-lg border-0 text-sm font-sans" name="email" placeholder="Your email" required="" type="email"/>
+<button class="bg-gold-star text-ink border-0 px-[22px] py-3.5 rounded-lg font-bold text-sm cursor-pointer" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+<script>
+  (function () {
+    var form = document.getElementById('newsletterForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thanks for subscribing!');
+      form.reset();
+    });
+  })();
+</script>
+
+<!-- FINAL CTA -->
+<section class="bg-paper-warm py-14 md:py-16 px-6 text-center">
+<h2 class="font-display text-2xl md:text-[28px] font-semibold mb-2.5">Ready to transform your health?</h2>
+<p class="text-[15px] text-ink-muted mb-5">Get a personalized plan tailored to your lifestyle.</p>
+<a class="bg-accent text-white px-[26px] py-[14px] rounded-lg no-underline font-bold text-[15px]" href="/#lead-form">Book Consultation</a>
 </section>
