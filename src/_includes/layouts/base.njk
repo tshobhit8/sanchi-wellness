@@ -189,7 +189,7 @@
         .faq-toggle { transition: transform 0.2s ease; }
         .card-hover { transition: box-shadow .2s ease; }
         .card-hover:hover { box-shadow: 0 16px 36px oklch(20% 0.02 75 / 0.12); }
-        .carousel-track { scrollbar-width: none; -ms-overflow-style: none; }
+        .carousel-track { scrollbar-width: none; -ms-overflow-style: none; scroll-behavior: smooth; }
         .carousel-track::-webkit-scrollbar { display: none; }
         @media (max-width: 760px) {
             .main-nav { display: none !important; }
@@ -209,6 +209,7 @@
             .how-it-works-grid .step-title { font-size: 11.5px !important; margin-bottom: 4px !important; }
             .how-it-works-grid .step-desc { font-size: 9.5px !important; line-height: 1.35 !important; }
             .floating-cta { bottom: 84px !important; width: 52px !important; height: 52px !important; }
+            .testimonial-img { aspect-ratio: 16 / 9 !important; }
             .footer-section { padding-top: 32px !important; padding-bottom: 18px !important; }
             .footer-section .footer-grid { gap: 26px 20px !important; padding-bottom: 22px !important; }
             .footer-section .footer-col-title { font-size: 11.5px !important; margin-bottom: 10px !important; }
@@ -303,18 +304,24 @@
         d.style.background = idx === current ? 'var(--color-accent)' : 'var(--color-hairline)';
       });
     }
+    // Scroll only the track itself (never the page) to bring a card into view
     function goTo(idx) {
       current = (idx + count) % count;
-      cards[current].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      var card = cards[current];
+      var trackRect = track.getBoundingClientRect();
+      var cardRect = card.getBoundingClientRect();
+      var targetLeft = track.scrollLeft + (cardRect.left - trackRect.left);
+      track.scrollLeft = targetLeft;
       render();
     }
     function startAutoplay() {
+      if (autoplayTimer) clearInterval(autoplayTimer);
       autoplayTimer = setInterval(function () { goTo(current + 1); }, 4500);
     }
-    function restartAutoplay() {
-      if (autoplayTimer) clearInterval(autoplayTimer);
-      startAutoplay();
+    function stopAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
     }
+    function restartAutoplay() { stopAutoplay(); startAutoplay(); }
     var prevBtn = carousel.querySelector('.carousel-prev');
     var nextBtn = carousel.querySelector('.carousel-next');
     if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); restartAutoplay(); });
@@ -329,10 +336,18 @@
         render();
       }, 100);
     });
-    track.addEventListener('pointerdown', function () { if (autoplayTimer) clearInterval(autoplayTimer); });
+    track.addEventListener('pointerdown', stopAutoplay);
     track.addEventListener('pointerup', restartAutoplay);
     render();
-    startAutoplay();
+    // Only autoplay while the carousel is actually visible on screen
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { startAutoplay(); } else { stopAutoplay(); }
+      }, { threshold: 0.4 });
+      io.observe(carousel);
+    } else {
+      startAutoplay();
+    }
   }
 </script>
 </body>
