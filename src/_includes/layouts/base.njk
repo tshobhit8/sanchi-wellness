@@ -191,9 +191,14 @@
         .card-hover:hover { box-shadow: 0 16px 36px oklch(20% 0.02 75 / 0.12); }
         .carousel-track { scrollbar-width: none; -ms-overflow-style: none; scroll-behavior: smooth; }
         .carousel-track::-webkit-scrollbar { display: none; }
+        .site-header { transition: padding .15s ease; }
         @media (max-width: 760px) {
             .main-nav { display: none !important; }
             .utility-bar { display: none !important; }
+            .site-header { flex-wrap: nowrap !important; padding-top: 12px !important; padding-bottom: 12px !important; }
+            .site-logo { font-size: 16px !important; }
+            .site-header.header-scrolled { padding-top: 8px !important; padding-bottom: 8px !important; }
+            .site-header.header-scrolled .site-logo { font-size: 14px !important; }
             .grid-2 { grid-template-columns: 1fr !important; }
             .grid-3 { grid-template-columns: 1fr !important; }
             .grid-5 { grid-template-columns: repeat(2, 1fr) !important; }
@@ -268,6 +273,17 @@
   (function () {
     var fab = document.getElementById('floating-cta');
     if (fab && !document.getElementById('lead-form')) { fab.setAttribute('href', '/#lead-form'); }
+  })();
+
+  // Shrink the sticky header on scroll to reclaim screen space on mobile
+  (function () {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    function onScroll() {
+      header.classList.toggle('header-scrolled', window.scrollY > 8);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   })();
 
   // FAQ Accordion — single-open-at-a-time
