@@ -24,11 +24,7 @@ She wanted toknow if it was worth ₹180 a week.
 
 My answer tooktwenty minutes, so here it is properly.
 
-
-
 </div>
-
-
 
 <div id="short">
 
@@ -43,8 +39,6 @@ An avocado added on top of your usual butter-and-cheese sandwich does close to n
 That distinction is the entire article. Everything below is detail.
 
 </div>
-
-
 
 <div id="actually">
 
@@ -68,8 +62,6 @@ The potassium matters too, for blood pressure. One caveat, and it’s important:
 
 </div>
 
-
-
 <div id="research">
 
 ## What the research actually says about one avocado a day
@@ -88,11 +80,7 @@ I’m telling youthe disappointing study because I’d rather you trust me than 
 
 Which brings usto the question nobody writing about avocados wants to answer.
 
-
-
 </div>
-
-
 
 <div id="Money">
 
@@ -110,8 +98,6 @@ Nutritionadvice that ignores what things cost isn’t advice. It’s marketing.
 
 </div>
 
-
-
 <div id="eat">
 
 ## How much avocado should you eat?
@@ -126,8 +112,6 @@ If you wantthat number worked out for your body and your routine rather than gue
 
 </div>
 
-
-
 <div id="everday">
 
 ## Can I eat avocado every day?
@@ -137,8 +121,6 @@ For mosthealthy adults, yes — there’s nothing about daily avocado that cause
 But you don’t *need*to. Nothing about a good diet requires any single food to appear daily. Threeor four times a week is completely fine. Eating it because you enjoy it is abetter reason than eating it because a trial protocol used a daily dose.
 
 </div>
-
-
 
 <div id="cholesterol">
 
@@ -152,8 +134,6 @@ What avocadowill not do is offset a diet that’s otherwise working against you.
 
 </div>
 
-
-
 <div id="diabetes">
 
 ## Avocado, diabetes and weight loss
@@ -166,8 +146,6 @@ Same food.Opposite outcomes. Depends only on whether it replaced something or jo
 
 </div>
 
-
-
 <div id="Buying">
 
 ## Buying and storing, since nobody mentions this
@@ -178,13 +156,7 @@ To speed upripening, put it in a paper bag with a banana. To slow it down once r
 
 Cut surfacegoes brown fast. Lemon juice, cling film pressed directly against the flesh,and keeping the seed in the unused half all help a bit.
 
-
-
 </div>
-
-
-
-
 
 <div id="ways_to_eat">
 
@@ -198,8 +170,6 @@ The point isn’tto build meals around it. It’s an ingredient, not a centrepie
 
 </div>
 
-
-
 <div id="end">
 
 ## What I’d actually tell you if you were sitting across from me
@@ -209,5 +179,17 @@ Avocado is agood food. Include it if you like it and it fits your budget.
 But hearthealth isn’t built out of individual foods. It’s built out of what you eat mostdays for years — enough vegetables, enough protein, enough fibre, lesssaturated and trans fat, fewer packaged and fried things, plus movement, sleep,and keeping your blood pressure and blood sugar in range.
 
 No fruitoutperforms that. Not this one, not the next one that goes viral.
+
+</div>
+
+<div id="ref">
+
+### References
+
+1. Wang L, Bordi PL,Fleming JA, Hill AM, Kris-Etherton PM. Effect of a moderate fat diet with andwithout avocados on lipoprotein particle number, size and subclasses inoverweight and obese adults: a randomized, controlled trial. Journal of theAmerican Heart Association, 2015.
+
+2. Lichtenstein AH,Kris-Etherton PM, Petersen KS, et al. Effect of Incorporating 1 Avocado Per DayVersus Habitual Diet on Visceral Adiposity: A Randomized Trial (Habitual Dietand Avocado Trial). Journal of the American Heart Association, 2022.
+
+3. USDA FoodData Central— Avocados, raw, all commercial varieties.
 
 </div>
