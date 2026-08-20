@@ -28,7 +28,8 @@ layout: layouts/base.njk
 </section>
 
 <!-- BODY -->
-<section class="max-w-[760px] mx-auto px-6 pb-14 article-body prose prose-lg max-w-none
+<section class="max-w-[760px] mx-auto px-6 pb-14">
+<div class="article-body prose prose-lg max-w-none
   prose-headings:font-display prose-headings:text-ink
   prose-h2:text-2xl prose-h2:font-semibold prose-h2:mb-3.5 prose-h2:mt-9 first:prose-h2:mt-0
   prose-p:text-ink-muted prose-p:leading-relaxed
@@ -36,6 +37,7 @@ layout: layouts/base.njk
   prose-strong:text-ink prose-strong:font-semibold
   prose-li:text-ink-muted">
 {{ content | safe }}
+</div>
 {% if ctaText %}
 <div class="pt-6 border-t border-hairline">
 <p class="text-[15px]">{{ ctaText }} <a class="text-accent-text-dark underline" href="{{ ctaLinkHref }}">{{ ctaLinkText }}</a> or <a class="text-accent-text-dark underline" href="/#lead-form">book a free consultation</a>.</p>
