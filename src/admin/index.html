@@ -8,5 +8,16 @@
 </head>
 <body>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+  CMS.registerPreviewStyle(`
+    body { max-width: 760px; margin: 0 auto; padding: 40px 24px; font-family: 'Work Sans', Arial, sans-serif; color: #221f1c; line-height: 1.65; }
+    h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 600; line-height: 1.25; }
+    h1 { font-size: 34px; margin: 0 0 16px; }
+    h2 { font-size: 22px; margin: 32px 0 12px; }
+    p { margin: 0 0 18px; }
+    img { max-width: 100%; border-radius: 12px; display: block; margin: 0 auto 20px; }
+    a { color: #16a34a; }
+  `, { raw: true });
+</script>
 </body>
 </html>

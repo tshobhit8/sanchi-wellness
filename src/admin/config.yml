@@ -26,7 +26,9 @@ collections:
       - label: "Category"
         name: "category"
         widget: "select"
+        default: "General"
         options:
+          - "General"
           - "Weight Loss"
           - "PCOD / PCOS"
           - "Diabetes"
