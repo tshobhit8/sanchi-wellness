@@ -104,5 +104,5 @@ No fruit outperforms that. Not this one, not the next one that goes viral.
 
 1. [Wang L, Bordi PL, Fleming JA, Hill AM, Kris-Etherton PM. Effect of a moderate fat diet with and without avocados on lipoprotein particle number, size and subclasses in overweight and obese adults: a randomized, controlled trial. Journal of the American Heart Association, 2015.](https://doi.org/10.1161/JAHA.114.001355)
    
-2. [Lichtenstein AH, Kris-Etherton PM, Petersen KS, et al. Effect of Incorporating 1 Avocado Per Day Versus Habitual Diet on Visceral Adiposity: A Randomized Trial (Habitual Diet and Avocado Trial). Journal of the American Heart Association, 2022.] (https://doi.org/10.1161/JAHA.122.025657)
+2. [Lichtenstein AH, Kris-Etherton PM, Petersen KS, et al. Effect of Incorporating 1 Avocado Per Day Versus Habitual Diet on Visceral Adiposity: A Randomized Trial Habitual Diet and Avocado Trial. Journal of the American Heart Association, 2022.] (https://doi.org/10.1161/JAHA.122.025657)
 3. [USDA FoodData Central — Avocados, raw, all commercial varieties.](https://fdc.nal.usda.gov/food-details/171705/nutrients)
