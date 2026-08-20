@@ -14,7 +14,7 @@ ctaText: Want a Diabetes loss plan built around real Indian food?
 ctaLinkText: Explore our programs
 ctaLinkHref: /Programs/avocado-heart-health-indian-diet/
 ---
-H1: Is Avocado Actually Good For Your Heart? An Indian Dietitian's Honest Answer
+# Is Avocado Actually Good For Your Heart? An Indian Dietitian's Honest Answer
 
 *By Dietitian Sanchi*
 
@@ -100,13 +100,9 @@ Avocado is a good food. Include it if you like it and it fits your budget.
 But heart health isn't built out of individual foods. It's built out of what you eat most days for years — enough vegetables, enough protein, enough fibre, less saturated and trans fat, fewer packaged and fried things, plus movement, sleep, and keeping your blood pressure and blood sugar in range.
 No fruit outperforms that. Not this one, not the next one that goes viral.
 
-
-
 ### References
 
-1. Wang L, Bordi PL, Fleming JA, Hill AM, Kris-Etherton PM. Effect of a moderate fat diet with and without avocados on lipoprotein particle number, size and subclasses in overweight and obese adults: a randomized, controlled trial. Journal of the American Heart Association, 2015.
-   Link: https://doi.org/10.1161/JAHA.114.001355
-2. Lichtenstein AH, Kris-Etherton PM, Petersen KS, et al. Effect of Incorporating 1 Avocado Per Day Versus Habitual Diet on Visceral Adiposity: A Randomized Trial (Habitual Diet and Avocado Trial). Journal of the American Heart Association, 2022.
-   Link: https://doi.org/10.1161/JAHA.122.025657
-3. USDA FoodData Central — Avocados, raw, all commercial varieties.
-   Link: https://fdc.nal.usda.gov/food-details/171705/nutrients
+1. [Wang L, Bordi PL, Fleming JA, Hill AM, Kris-Etherton PM. Effect of a moderate fat diet with and without avocados on lipoprotein particle number, size and subclasses in overweight and obese adults: a randomized, controlled trial. Journal of the American Heart Association, 2015.](https://doi.org/10.1161/JAHA.114.001355)
+   
+2. [Lichtenstein AH, Kris-Etherton PM, Petersen KS, et al. Effect of Incorporating 1 Avocado Per Day Versus Habitual Diet on Visceral Adiposity: A Randomized Trial (Habitual Diet and Avocado Trial). Journal of the American Heart Association, 2022.] (https://doi.org/10.1161/JAHA.122.025657)
+3. [USDA FoodData Central — Avocados, raw, all commercial varieties.](https://fdc.nal.usda.gov/food-details/171705/nutrients)
