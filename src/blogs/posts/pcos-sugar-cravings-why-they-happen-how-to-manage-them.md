@@ -10,9 +10,9 @@ date: 2026-08-21T15:41:00.000+05:30
 readTime: 5 min read
 heroImage: /assets/blog-images/pocs.webp
 heroImageAlt: PCOS Diet
-ctaText: Book a consultation with Dietitian Sanchi →
-ctaLinkText: https://sanchidietitian.in/#lead-form
-ctaLinkHref: /blogs//pcos-sugar-cravings-causes-management
+ctaText: ""
+ctaLinkText: ""
+ctaLinkHref: /blogs/pcos-sugar-cravings-causes-management
 ---
 # PCOS and Sugar Cravings: Why You Crave Sweets, and What Actually Helps
 
@@ -120,7 +120,7 @@ PCOS management was never about eating perfectly. It's about building a pattern 
 
 General advice can only take you so far — your triggers, your schedule and your kitchen aren't the same as anyone else's. If you're dealing with PCOS, persistent cravings, irregular periods, or weight that won't shift no matter what you try, a plan built around your actual bloodwork, routine and food preferences works better than another generic list.
 
-**[Book a consultation with Dietitian Sanchi →](YOUR-BOOKING-PAGE-URL-HERE)**
+**[Book a consultation with Dietitian Sanchi →](https://sanchidietitian.in/#lead-form)**
 
 I'll look at what's actually driving your cravings and build something that works with your life, not against it.
 
