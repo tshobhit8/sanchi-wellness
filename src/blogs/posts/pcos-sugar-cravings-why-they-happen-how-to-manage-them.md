@@ -124,11 +124,6 @@ General advice can only take you so far — your triggers, your schedule and you
 
 I'll look at what's actually driving your cravings and build something that works with your life, not against it.
 
----
-
-**Medical disclaimer:** This article is intended for general nutrition education and does not replace individualised medical or dietary advice. PCOS affects women differently. If you have PCOS, diabetes, prediabetes, an eating disorder, are pregnant, or are taking medication, please consult an appropriately qualified healthcare professional for personalised guidance.
-
-If you recognise yourself in the disordered-eating patterns mentioned above — regular binge eating, loss of control around food, or intense guilt after eating — please know that support is available and reaching out to a qualified professional is a strong first step, not an admission of failure.
 
 ### References
 
