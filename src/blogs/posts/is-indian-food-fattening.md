@@ -17,7 +17,8 @@ jsonld: |
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Is Indian Food Really Fattening? The Truth About Balanced Diets",
-    "author": { "@type": "Person", "name": "Sanchi Nutrition & Wellness" },
+    "image": "https://sanchidietitian.in/assets/images/blog-indian-food.jpg",
+    "author": { "@type": "Person", "name": "Sanchi Singh", "url": "https://sanchidietitian.in/about/" },
     "publisher": { "@type": "Organization", "name": "Sanchi Nutrition & Wellness" },
     "datePublished": "2026-08-01",
     "description": "Indian food has a reputation for being fattening, but that's a myth. Learn what traditional Indian diets actually look like and how to build a balanced plate for weight loss."

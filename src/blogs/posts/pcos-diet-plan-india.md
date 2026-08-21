@@ -17,7 +17,8 @@ jsonld: |
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "PCOS Diet Plan India: What to Eat and Avoid",
-    "author": { "@type": "Person", "name": "Sanchi Nutrition & Wellness" },
+    "image": "https://sanchidietitian.in/assets/images/blog-pcos-diet.jpg",
+    "author": { "@type": "Person", "name": "Sanchi Singh", "url": "https://sanchidietitian.in/about/" },
     "publisher": { "@type": "Organization", "name": "Sanchi Nutrition & Wellness" },
     "datePublished": "2026-08-05",
     "description": "A practical PCOS diet plan for Indian kitchens: what to eat, what to limit, and how to build a sample day of meals that support hormonal balance and insulin resistance."

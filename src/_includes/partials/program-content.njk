@@ -110,6 +110,51 @@
 </div>
 </section>
 
+{% if faqs %}
+<!-- FAQ -->
+<section class="max-w-[840px] mx-auto px-6 pb-16 md:pb-20">
+<h2 class="font-display text-2xl md:text-[28px] font-semibold mb-6 text-center">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-3.5">
+{% for faq in faqs %}
+<div class="faq-item border border-hairline rounded-2xl bg-card overflow-hidden transition-shadow">
+<button class="faq-button w-full flex justify-between items-center gap-4 px-6 py-5 cursor-pointer font-bold text-base font-display text-left bg-transparent border-0">
+<span>{{ faq.question }}</span>
+<span class="faq-toggle shrink-0 w-[30px] h-[30px] rounded-full bg-accent-light text-accent-text-dark flex items-center justify-center text-base">+</span>
+</button>
+<div class="faq-answer px-6">
+<p class="text-[14.5px] text-ink-muted leading-relaxed m-0">{{ faq.answer }}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}
+    {
+      "@type": "Question",
+      "name": {{ faq.question | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ faq.answer | dump | safe }} }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% if relatedBlogUrl %}
+<!-- RELATED READING -->
+<section class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20">
+<a class="block bg-paper-soft rounded-2xl p-6 md:p-7 no-underline text-inherit hover:bg-card transition-colors" href="{{ relatedBlogUrl }}">
+<div class="text-[13px] font-bold text-warm uppercase tracking-[0.06em] mb-2">From the blog</div>
+<div class="font-display text-lg font-semibold">{{ relatedBlogTitle }} →</div>
+</a>
+</section>
+{% endif %}
+
 <!-- OTHER PROGRAMS -->
 <section class="max-w-[1280px] mx-auto px-6 pb-16 md:pb-20">
 <div class="flex justify-between items-center mb-7 flex-wrap gap-3">
@@ -133,4 +178,5 @@
 <h2 class="font-display text-[26px] md:text-[30px] font-semibold mb-3">Ready to transform your health?</h2>
 <p class="text-base text-ink-muted mb-6">Get a personalized plan tailored to your lifestyle.</p>
 <a class="bg-accent text-white px-[26px] py-[14px] rounded-lg no-underline font-bold text-[15px]" href="#lead-form">Book Consultation</a>
+<p class="text-[12px] text-ink-muted mt-8 max-w-[560px] mx-auto opacity-70">This program provides nutrition and dietary guidance, not a substitute for medical diagnosis or treatment. Please consult your physician for any medical condition.</p>
 </section>

@@ -9,15 +9,24 @@ category: General
 date: 2026-08-21T15:41:00.000+05:30
 readTime: 5 min read
 heroImage: /assets/blog-images/pocs.webp
-heroImageAlt: PCOS Diet
-ctaText: ""
-ctaLinkText: ""
-ctaLinkHref: /blogs/pcos-sugar-cravings-causes-management
+heroImageAlt: A PCOS-friendly breakfast spread with vegetable-paneer chilla, roasted chana and nuts, apple with peanut butter, dates, and chai
+ctaText: Want a PCOS nutrition plan built around your actual cravings and routine?
+ctaLinkText: Explore our PCOD / PCOS program
+ctaLinkHref: /Programs/pcod-pcos/
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "PCOS Sugar Cravings: Why They Happen & How to Manage Them",
+    "image": "https://sanchidietitian.in/assets/blog-images/pocs.webp",
+    "author": { "@type": "Person", "name": "Sanchi Singh", "url": "https://sanchidietitian.in/about/" },
+    "publisher": { "@type": "Organization", "name": "Sanchi Nutrition & Wellness" },
+    "datePublished": "2026-08-21",
+    "description": "Constantly craving sweets with PCOS? An Indian dietitian explains the real causes — insulin, meal timing, stress — and practical ways to manage it."
+  }
+  </script>
 ---
-# PCOS and Sugar Cravings: Why You Crave Sweets, and What Actually Helps
-
-*By Dietitian Sanchi*
-
 A patient once told me, almost apologetically, that she could eat clean all day and then stand in front of her fridge at 9 PM eating chocolate straight from the wrapper. She thought it meant she had no willpower.
 
 It didn't. It meant she'd eaten too little, too late, for most of the day.

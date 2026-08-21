@@ -17,7 +17,8 @@ jsonld: |
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How Your Thyroid Affects Weight (And What to Do About It)",
-    "author": { "@type": "Person", "name": "Sanchi Nutrition & Wellness" },
+    "image": "https://sanchidietitian.in/assets/images/blog-thyroid-weight.jpg",
+    "author": { "@type": "Person", "name": "Sanchi Singh", "url": "https://sanchidietitian.in/about/" },
     "publisher": { "@type": "Organization", "name": "Sanchi Nutrition & Wellness" },
     "datePublished": "2026-08-08",
     "description": "Understand the thyroid-weight connection, the signs your thyroid might be affecting your weight, and nutrition strategies that support thyroid function alongside medication."

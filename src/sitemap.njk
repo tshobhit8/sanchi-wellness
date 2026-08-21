@@ -1,0 +1,46 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sanchidietitian.in/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+{% for p in programs %}
+  <url>
+    <loc>https://sanchidietitian.in/Programs/{{ p.slug }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+{% endfor %}
+  <url>
+    <loc>https://sanchidietitian.in/blogs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+{% for post in collections.blogPosts %}
+  <url>
+    <loc>https://sanchidietitian.in{{ post.url }}</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+{% endfor %}
+  <url>
+    <loc>https://sanchidietitian.in/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://sanchidietitian.in/terms-of-service/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

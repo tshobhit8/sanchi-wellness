@@ -8,16 +8,25 @@ description: Does one avocado a day really lower cholesterol? An Indian
 category: General
 date: 2026-08-20T19:21:00.000+05:30
 readTime: 10 min read
-heroImage: /assets/blog-images/avocado1.png
-heroImageAlt: Avocado image
-ctaText: Want a Diabetes loss plan built around real Indian food?
-ctaLinkText: Explore our programs
-ctaLinkHref: /blogs/avocado-heart-health-indian-diet/
+heroImage: /assets/blog-images/avocado1.jpg
+heroImageAlt: Sliced avocado on a plate, halves showing the pit and flesh
+ctaText: Want a diabetes-friendly nutrition plan built around real Indian food?
+ctaLinkText: Explore our Diabetes program
+ctaLinkHref: /Programs/diabetes/
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Is Avocado Good For Your Heart? An Indian Dietitian Explains",
+    "image": "https://sanchidietitian.in/assets/blog-images/avocado1.jpg",
+    "author": { "@type": "Person", "name": "Sanchi Singh", "url": "https://sanchidietitian.in/about/" },
+    "publisher": { "@type": "Organization", "name": "Sanchi Nutrition & Wellness" },
+    "datePublished": "2026-08-20",
+    "description": "Does one avocado a day really lower cholesterol? An Indian dietitian breaks down the research, the right portion size, and whether it's worth the price."
+  }
+  </script>
 ---
-# Is Avocado Actually Good For Your Heart? An Indian Dietitian's Honest Answer
-
-*By Dietitian Sanchi*
-
 A client asked me this last month, holding up her phone with a reel that promised one avocado a day would "unclog your arteries."
 She wanted to know if it was worth ₹180 a week.
 My answer took twenty minutes, so here it is properly.

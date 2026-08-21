@@ -16,7 +16,7 @@ layout: layouts/base.njk
 <div class="flex items-center gap-3 py-4 border-t border-b border-hairline">
 <img alt="Sanchi Singh" class="w-11 h-11 rounded-full object-cover" src="/assets/images/sanchi-avatar.jpg"/>
 <div>
-<div class="font-bold text-sm">Sanchi Singh</div>
+<a class="font-bold text-sm text-ink no-underline hover:underline" href="/about/">Sanchi Singh</a>
 <div class="text-[12.5px] text-ink-muted">Published {{ date | readableDate }} · {{ readTime }}</div>
 </div>
 </div>
@@ -46,14 +46,19 @@ layout: layouts/base.njk
 </section>
 
 <!-- AUTHOR BOX -->
-<section class="max-w-[760px] mx-auto px-6 pb-14">
+<section class="max-w-[760px] mx-auto px-6 pb-6">
 <div class="bg-paper-soft rounded-2xl p-7 flex gap-4.5 items-center">
 <img alt="Sanchi Singh" class="w-16 h-16 rounded-full object-cover shrink-0" src="/assets/images/sanchi-avatar.jpg"/>
 <div>
-<div class="font-bold text-[15px] mb-1">Written by Sanchi Singh</div>
-<p class="text-[13.5px] text-ink-muted m-0">Nutrition coach with 5+ years of experience helping Indian families manage weight, PCOD, diabetes and thyroid conditions through practical, home-cooked meal plans.</p>
+<a class="font-bold text-[15px] mb-1 text-ink no-underline hover:underline block" href="/about/">Written by Sanchi Singh, M.Sc. Clinical Nutrition</a>
+<p class="text-[13.5px] text-ink-muted m-0">Nutrition coach with 5+ years of experience helping Indian families manage weight, PCOD, diabetes and thyroid conditions through practical, home-cooked meal plans, delivered entirely online.</p>
 </div>
 </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="max-w-[760px] mx-auto px-6 pb-14">
+<p class="text-[12px] text-ink-muted opacity-70 leading-relaxed m-0">This article is for general nutrition education and does not replace individualized medical advice. Please consult your physician before making changes to your diet, especially if you have an existing medical condition.</p>
 </section>
 
 <!-- CTA -->

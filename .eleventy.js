@@ -4,7 +4,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
-  eleventyConfig.addPassthroughCopy({ "src/sitemap.xml": "sitemap.xml" });
 
   // Blog posts collection, newest first
   eleventyConfig.addCollection("blogPosts", function (collectionApi) {
