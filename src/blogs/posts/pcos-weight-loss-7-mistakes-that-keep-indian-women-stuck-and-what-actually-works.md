@@ -3,14 +3,30 @@ layout: layouts/blog-post.njk
 permalink: /blogs/{{ page.fileSlug }}/index.html
 title: "PCOS Weight Loss: 7 Mistakes That Keep Indian Women Stuck (And What
   Actually Works)"
-description: Not losing weight with PCOS despite eating clean? A registered
-  dietitian breaks down the 7 PCOS-specific mistakes she sees most — and the
+description: Not losing weight with PCOS despite eating clean? A dietitian
+  breaks down the 7 PCOS-specific mistakes she sees most — and the
   Indian meal structure that fixes them.
 category: General
 date: 2026-09-01T23:38:00.000+05:30
-readTime: 5 min read
+readTime: 9 min read
 heroImage: /assets/blog-images/weightloss.webp
-heroImageAlt: Weight_Loss
+heroImageAlt: A woman at home measuring her waist with a tape measure, with a bowl of fresh fruit on the table
+ctaText: Ready for a PCOS weight-loss plan built around your actual life?
+ctaLinkText: Explore our PCOD / PCOS program
+ctaLinkHref: /Programs/pcod-pcos/
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "PCOS Weight Loss: 7 Mistakes That Keep Indian Women Stuck (And What Actually Works)",
+    "image": "https://sanchidietitian.in/assets/blog-images/weightloss.webp",
+    "author": { "@type": "Person", "name": "Sanchi Singh", "url": "https://sanchidietitian.in/about/" },
+    "publisher": { "@type": "Organization", "name": "Sanchi Nutrition & Wellness" },
+    "datePublished": "2026-09-01",
+    "description": "Not losing weight with PCOS despite eating clean? A dietitian breaks down the 7 PCOS-specific mistakes she sees most — and the Indian meal structure that fixes them."
+  }
+  </script>
 ---
 You cut rice. You started walking. You bought the sugar-free biscuits and the "PCOS-friendly" granola. Six weeks in, the scale hasn't moved — or it moved 2 kg and stopped dead.
 
@@ -25,7 +41,6 @@ The seven mistakes below aren't generic weight-loss advice. They're the specific
 This isn't in your head, and it isn't a willpower problem.
 
 Insulin resistance is present in a majority of women with PCOS — including many who are lean. When cells respond poorly to insulin, the pancreas compensates by producing more. Higher circulating insulin makes fat storage easier, fat release harder, and hunger and cravings louder. It also drives the ovaries to produce more androgens, which is what links the weight difficulty to the irregular cycles, the acne and the hair changes.
-[Rotterdam criteria consensus paper or a recent review on insulin resistance prevalence in PCOS.](https://pubmed.ncbi.nlm.nih.gov/14688154/)
 
 ## Two consequences matter for what follows:
 
@@ -58,7 +73,7 @@ The typical Indian plate is structurally low in protein. Four rotis, a small kat
 
 Protein matters more in PCOS than in general weight loss for two reasons: it blunts the glucose and insulin response of the meal it's eaten with, and it protects muscle mass while you're losing weight — which directly protects your insulin sensitivity.
 
-**The practical target:** a palm-sized portion of protein at every main meal, and roughly 20–30 g at breakfast specifically, which is where almost everyone falls short. \[[Adjust these figures to how you personally prescribe — individual needs vary with body size, activity and clinical picture.]]
+**The practical target:** a palm-sized portion of protein at every main meal, and roughly 20–30 g at breakfast specifically, which is where almost everyone falls short. Treat these as general ranges — your own targets should be set with your dietitian based on body size, activity and clinical picture.
 
 **Indian protein, by rough amount per serving:**
 
@@ -74,7 +89,7 @@ Vegetarians: you will likely need a mix of dal, curd, paneer, soya and sprouts a
 
 ## Mistake 3: Cutting dairy and gluten because Instagram said so
 
-There is no strong evidence that dairy or gluten worsen PCOS in women without a diagnosed intolerance or coeliac disease. \[[Cite a review here if you have one to hand.]]
+There is no strong evidence that dairy or gluten worsen PCOS in women without a diagnosed intolerance or coeliac disease.
 
 I see the harm from this constantly. A woman removes curd, paneer and milk — three of the most accessible protein sources in an Indian vegetarian diet — and replaces them with almond milk and gluten-free crackers. Her protein intake collapses, her satiety collapses, and her PCOS is measurably worse two months later. She then blames herself.
 
@@ -95,7 +110,7 @@ Women quit good plans in week three because of this. It's the most avoidable fai
 * Cycle regularity — the outcome that actually indicates hormonal improvement
 * Energy in the afternoon, and whether the 4 pm crash has gone
 * Strength: are you lifting more or walking further than last month
-* \[[Bloodwork markers you track with clients — fasting insulin, HOMA-IR, HbA1c, lipid panel]]
+* Bloodwork, if you're getting it checked periodically — fasting insulin, HOMA-IR, HbA1c and lipid panel
 
 Weigh weekly at most, at the same point in your cycle, and only look at the monthly trend.
 
@@ -121,9 +136,9 @@ Diet is one input. These are the ones I see missed:
 
 **Sleep.** A single night of poor sleep measurably worsens insulin sensitivity the next day. If you're sleeping five hours and wondering why nothing works, start there before you change your diet.
 
-**Thyroid.** Hypothyroidism is more common in women with PCOS and produces overlapping symptoms — fatigue, weight difficulty, cycle changes. If it hasn't been checked recently, ask your doctor. \[[Link to your own post on this if you have one.]]
+**Thyroid.** Hypothyroidism is more common in women with PCOS and produces overlapping symptoms — fatigue, weight difficulty, cycle changes. If it hasn't been checked recently, ask your doctor.
 
-**Medication timing.** If you're on metformin, taking it with food generally reduces GI side effects. If you're taking inositol, \[[insert your own guidance on form, dose and evidence — this is a question you almost certainly get every week, and answering it properly here will earn you search traffic on its own]].
+**Medication timing.** If you're on metformin, taking it with food generally reduces GI side effects. If you're considering inositol, ask your doctor or dietitian about the right form and dose for you — this varies enough between individuals that it's worth getting personalized guidance rather than a generic number.
 
 **Vitamin D and B12.** Deficiency is widespread in Indian women and both are worth checking. B12 especially if you're vegetarian or on long-term metformin.
 
@@ -139,7 +154,7 @@ The plan fails on the days it didn't account for. In practice, that's most days.
 
 **South Indian breakfasts:** idli, dosa and upma are carb-dominant on their own. Add curd, egg, or a generous portion of sambar with extra dal. Don't stop eating them.
 
-**Navratri, Karva Chauth, Ekadashi:** fasting is not off-limits with PCOS, but going the whole day on sabudana and fried aloo will spike glucose hard. Build the fasting meal around curd, paneer, makhana, nuts and fruit, and keep the sabudana portion modest. \[[Add your own approach here — this is a genuinely underserved search topic in Indian PCOS content and worth its own post.]]
+**Navratri, Karva Chauth, Ekadashi:** fasting is not off-limits with PCOS, but going the whole day on sabudana and fried aloo will spike glucose hard. Build the fasting meal around curd, paneer, makhana, nuts and fruit, and keep the sabudana portion modest.
 
 **Weddings and long celebrations:** eat a protein-containing meal before you go. Arriving hungry to a buffet is the problem, not the buffet.
 
@@ -187,5 +202,9 @@ You don't need a perfect diet. You need a structure you can hold for six months.
 
 ## Work with me
 
-I'm Dietitian Sanchi,*M.Sc. Clinical Nutrition*. I work with Indian women managing PCOS to build nutrition plans around the food they already eat — no elimination diets, no imported ingredients, no protocols you'll abandon in three weeks.
-[Click here to book your free consultation](https://sanchidietitian.in/#lead-form)
+I'm Dietitian Sanchi, *M.Sc. Food & Nutrition*. I work with Indian women managing PCOS to build nutrition plans around the food they already eat — no elimination diets, no imported ingredients, no protocols you'll abandon in three weeks.
+[Click here to book your free consultation](/#lead-form)
+
+### References
+
+1. [Rotterdam ESHRE/ASRM-Sponsored PCOS Consensus Workshop Group. Revised 2003 consensus on diagnostic criteria and long-term health risks related to polycystic ovary syndrome.](https://pubmed.ncbi.nlm.nih.gov/14688154/) *Fertility and Sterility*, 2004.
